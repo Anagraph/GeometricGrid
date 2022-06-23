@@ -1,0 +1,12 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: bidone
+      port: 3434
+      dbname: postgres
+      schema: dbt
+      threads: 4

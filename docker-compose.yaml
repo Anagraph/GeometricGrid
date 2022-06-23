@@ -1,0 +1,20 @@
+version: '3.3'
+volumes:
+  bre:
+
+services:
+  db:
+    image: crunchydata/crunchy-postgres-gis:centos7-12.4-3.0-4.5.0
+    environment:
+      - PG_DATABASE=postgres
+      - PG_PRIMARY_PORT=5432
+      - PG_MODE=primary
+      - PG_USER=postgres
+      - PG_PASSWORD=bidone
+      - PG_PRIMARY_USER=postgres
+      - PG_PRIMARY_PASSWORD=bidone
+      - PG_ROOT_PASSWORD=bidone
+    ports:
+      - "3434:5432"
+    volumes:
+      - bre:/pgdata
